@@ -21,16 +21,16 @@ spec:
         app: test55
     spec:
       containers:
-      - image: harbor.192-168-2-19.nip.io/test55/mypython:XXXXXX
+      - image: harbor.192-168-2-19.nip.io/test55/mypython:73fd031
         imagePullPolicy: Always
         name: test55
         resources: {}
         terminationMessagePath: /dev/termination-log
         terminationMessagePolicy: File
-      imagePullSecrets:
-      - name: pull-secret
       dnsPolicy: ClusterFirst
       imagePullSecret: pull-secret
+      imagePullSecrets:
+      - name: pull-secret
       restartPolicy: Always
       schedulerName: default-scheduler
       securityContext: {}
